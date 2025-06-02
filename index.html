@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>スピーチタイム用Webコンポーネントテスト</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- 全体のスタイル-->
+  <style>
+    html, body, arcgis-map {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+
+  <!-- ArcGIS Maps SDK for JavaScript コアAPI をロード-->
+  <link rel="stylesheet" href="https://js.arcgis.com/4.32/esri/themes/light/main.css" />
+  <script src="https://js.arcgis.com/4.32/"></script>
+  
+  <!-- マップコンポーネントをロード -->
+  <script type="module" src="https://js.arcgis.com/map-components/4.32/arcgis-map-components.esm.js"></script>
+  
+  <!-- Calcite Design System をロード -->
+  <script type="module" src="https://js.arcgis.com/calcite-components/3.0.3/calcite.esm.js"></script>
+</head>
+
+<!-- arcgis-map を作成-->
+<body>
+  <arcgis-map basemap="topo-vector" center="138,35.5" zoom="5" popup-enabled="true">
+    <!-- コンポーネントからUIの要素を配置-->
+    <!-- ズームインアウト-->
+    <arcgis-zoom position="top-left"></arcgis-zoom>
+    <!-- 場所検索-->
+    <arcgis-search position="top-right"></arcgis-search>
+    <!-- ベースマップの変更-->
+    <arcgis-basemap-toggle position="bottom-left"></arcgis-basemap-toggle>
+    <!-- 凡例パネル-->
+    <arcgis-legend position="top-right"></arcgis-legend>
+    <!-- レイヤー一覧表示-->
+    <arcgis-layer-list position="top-right"></arcgis-layer-list>
+    <!-- プリント機能-->
+    <arcgis-print position="top-left"></arcgis-print>
+    
+  </arcgis-map>
+  <script src="main.js"></script>
+</body>
+
+</html>
